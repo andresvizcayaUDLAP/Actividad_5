@@ -8,7 +8,6 @@ public class Main {
 		String opcion;
 		char opcion1;
 		Scanner scan = new Scanner(System.in);
-		boolean validacion;
 		
 		do {
 			
@@ -37,7 +36,6 @@ public class Main {
 				case 'c': System.out.println("Área: " + cuadrado1.area()); break;
 				default: System.out.println("No es válido"); break;
 				}
-	
 				
 			} else if(opcion.equalsIgnoreCase("circulo")) {
 				
@@ -60,18 +58,12 @@ public class Main {
 					case 'b': System.out.println("Área: " + circulo1.area()); break;
 					default: System.out.println("No es válido");  break;
 				}
-				
+			
 			} else System.out.println("Elige una opción correcta");
 			
-			if(opcion.equalsIgnoreCase("cuadrado")||opcion.equalsIgnoreCase("circulo")) {
-				validacion = true;
-			} else {
-				validacion = false;
-			}
-			
-		} while(validacion==false);
+		} while(!(opcion.equalsIgnoreCase("cuadrado") || opcion.equalsIgnoreCase("circulo")));
 		
 		scan.close();
-	}
 		
+	}
 }
